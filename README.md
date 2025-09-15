@@ -1,16 +1,20 @@
-# tabib_now
+# 🩺 TabibNow
 
-A new Flutter project.
+**TabibNow** is a Flutter-based **doctor appointment mobile application** that allows patients to book, manage, and track their medical appointments easily.  
+Built with clean architecture and modular structure for scalability and maintainability.  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
+- 📅 Book, edit, and cancel doctor appointments
+- 👨‍⚕️ Browse available doctors and specialties
+- 🔔 Get appointment reminders
+- 🎨 Modern UI with custom theming
+- ⚡ State management with Cubit
+- 🌐 Networking layer for API integration
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📂 Project Structure
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="750" height="676" alt="image" src="https://github.com/user-attachments/assets/2b8a5cbe-f855-40e3-b1b8-711297060b87" />
