@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tabib_now/core/routing/routes.dart';
-import 'package:tabib_now/features/login/login_screen.dart';
+import 'package:tabib_now/features/login/ui/screen/login_screen.dart';
 import 'package:tabib_now/features/onboarding/ui/screen/onboarding_screen.dart';
 
 class AppRouter {
