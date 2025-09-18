@@ -19,7 +19,10 @@ class TabibNowApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: AppColors.mainBlue,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: AppColors.mainBlue, // your main blue will now apply
+            primary: AppColors.mainBlue, // explicitly set primary
+          ),
           scaffoldBackgroundColor: Colors.white,
         ),
         initialRoute: Routes.onBoardingScreen,
