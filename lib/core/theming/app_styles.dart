@@ -11,6 +11,12 @@ abstract class AppStyles {
     fontWeight: FontWeightHelper.bold,
   );
 
+  static TextStyle font15BlackMedium = TextStyle(
+    fontSize: 15.sp,
+    color: Colors.black,
+    fontWeight: FontWeightHelper.medium,
+  );
+
   static TextStyle font14BlackMedium = TextStyle(
     fontSize: 14.sp,
     color: Colors.black,
@@ -45,6 +51,12 @@ abstract class AppStyles {
     fontSize: 13.sp,
     color: AppColors.mainBlue,
     fontWeight: FontWeightHelper.regular,
+  );
+
+  static TextStyle font14BlueSemiBold = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.mainBlue,
+    fontWeight: FontWeightHelper.semiBold,
   );
 
   static TextStyle font13BlueSemiBold = TextStyle(
