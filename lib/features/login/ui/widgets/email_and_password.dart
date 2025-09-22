@@ -28,9 +28,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   @override
   void initState() {
     super.initState();
-    passwordController = context
-        .read<LoginCubit>()
-        .passwordController;
+    passwordController = context.read<LoginCubit>().passwordController;
     setupPasswordControllerListener();
   }
 
@@ -51,9 +49,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: context
-          .read<LoginCubit>()
-          .formKey,
+      key: context.read<LoginCubit>().formKey,
       child: Column(
         children: [
           AppTextFormField(
@@ -65,15 +61,11 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
                 return 'Please enter a valid email';
               }
             },
-            controller: context
-                .read<LoginCubit>()
-                .emailController,
+            controller: context.read<LoginCubit>().emailController,
           ),
           verticalSpace(18),
           AppTextFormField(
-            controller: context
-                .read<LoginCubit>()
-                .passwordController,
+            controller: context.read<LoginCubit>().passwordController,
             hintText: 'Password',
             isObscureText: isObscureText,
             suffixIcon: GestureDetector(
@@ -88,7 +80,9 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               ),
             ),
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value == null ||
+                  value.isEmpty ||
+                  !AppRegex.isPasswordValid(value)) {
                 return 'Please enter a valid password';
               }
             },

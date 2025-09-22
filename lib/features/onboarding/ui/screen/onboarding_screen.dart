@@ -30,7 +30,7 @@ class OnboardingScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
+                        "Manage and schedule all of your medical appointments easily with TabibNow to get a new experience.",
                         textAlign: TextAlign.center,
                         style: AppStyles.font13GreyRegular,
                       ),
@@ -38,7 +38,10 @@ class OnboardingScreen extends StatelessWidget {
                       AppTextButton(
                         buttonText: "Get Started",
                         onPressed: () {
-                          context.pushNamed(Routes.loginScreen);
+                          context.pushNamedAndRemoveUntil(
+                            Routes.loginScreen,
+                            (route) => false,
+                          );
                         },
                       ),
                     ],
