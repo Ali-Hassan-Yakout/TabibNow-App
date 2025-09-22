@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
 import 'package:tabib_now/core/helpers/extensions.dart';
 import 'package:tabib_now/core/routing/routes.dart';
 import 'package:tabib_now/core/theming/app_styles.dart';
 
-class DontHaveAccountText extends StatelessWidget {
-  const DontHaveAccountText({super.key});
+class AlreadyHaveAccountText extends StatelessWidget {
+  const AlreadyHaveAccountText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +15,15 @@ class DontHaveAccountText extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: "Don't have an account yet?",
+              text: "Already have an account yet?",
               style: AppStyles.font13BlackRegular,
             ),
             TextSpan(
-              text: " Sign Up",
+              text: " Sign In",
               style: AppStyles.font13BlueSemiBold,
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  context.pushReplacementNamed(Routes.registerScreen);
+                  context.pushReplacementNamed(Routes.loginScreen);
                 },
             ),
           ],

@@ -6,6 +6,8 @@ import 'package:tabib_now/features/home/ui/screen/home_screen.dart';
 import 'package:tabib_now/features/login/logic/login_cubit.dart';
 import 'package:tabib_now/features/login/ui/screen/login_screen.dart';
 import 'package:tabib_now/features/onboarding/ui/screen/onboarding_screen.dart';
+import 'package:tabib_now/features/register/logic/register_cubit.dart';
+import 'package:tabib_now/features/register/ui/screen/register_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -20,7 +22,12 @@ class AppRouter {
           ),
         );
       case Routes.registerScreen:
-        return MaterialPageRoute(builder: (_) => Placeholder());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<RegisterCubit>(),
+            child: RegisterScreen(),
+          ),
+        );
       case Routes.homeScreen:
         return MaterialPageRoute(builder: (_) => HomeScreen());
       default:
