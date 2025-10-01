@@ -1,0 +1,22 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "tabibnow",
+          "appId": "1:715092643901:android:92af2c6550e892ecaa1a54",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "tabibnow",
+          "configurations": {
+            "android": "1:715092643901:android:92af2c6550e892ecaa1a54",
+            "ios": "1:715092643901:ios:98b56daa7defab67aa1a54"
+          }
+        }
+      }
+    }
+  }
+}

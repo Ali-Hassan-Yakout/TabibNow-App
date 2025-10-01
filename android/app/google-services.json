@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "715092643901",
+    "project_id": "tabibnow",
+    "storage_bucket": "tabibnow.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715092643901:android:92af2c6550e892ecaa1a54",
+        "android_client_info": {
+          "package_name": "com.example.tabib_now"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ8nAk9dcgbm41sn-txEt0c33155VC72o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
