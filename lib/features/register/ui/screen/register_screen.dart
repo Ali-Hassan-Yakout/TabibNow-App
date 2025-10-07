@@ -32,7 +32,7 @@ class RegisterScreen extends StatelessWidget {
                 Text(
                   "Sign up now and start exploring all that our app has to offer. We're excited to welcome you to our community!",
                   textAlign: TextAlign.start,
-                  style: AppStyles.font14GreyRegular,
+                  style: AppStyles.font14GrayRegular,
                 ),
                 verticalSpace(36),
                 RegisterForm(),

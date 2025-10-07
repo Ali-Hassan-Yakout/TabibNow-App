@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                 Text(
                   "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
                   textAlign: TextAlign.start,
-                  style: AppStyles.font14GreyRegular,
+                  style: AppStyles.font14GrayRegular,
                 ),
                 verticalSpace(36),
                 EmailAndPassword(),
