@@ -16,7 +16,7 @@ class DontHaveAccountText extends StatelessWidget {
           children: [
             TextSpan(
               text: "Don't have an account yet?",
-              style: AppStyles.font13BlackRegular,
+              style: AppStyles.font13DarkBlueRegular,
             ),
             TextSpan(
               text: " Sign Up",

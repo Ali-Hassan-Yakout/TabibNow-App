@@ -32,7 +32,7 @@ class OnboardingScreen extends StatelessWidget {
                       Text(
                         "Manage and schedule all of your medical appointments easily with TabibNow to get a new experience.",
                         textAlign: TextAlign.center,
-                        style: AppStyles.font13GreyRegular,
+                        style: AppStyles.font13GrayRegular,
                       ),
                       verticalSpace(30),
                       AppTextButton(

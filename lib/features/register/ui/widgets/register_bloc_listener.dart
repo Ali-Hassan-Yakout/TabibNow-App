@@ -75,8 +75,8 @@ class RegisterBlocListener extends StatelessWidget {
     showDialog(
       context: context,
       builder: (BuildContext context) => AlertDialog(
-        icon: Icon(Icons.error_outline, color: AppColors.lightRed, size: 32.r),
-        content: Text(error, style: AppStyles.font15BlackMedium),
+        icon: Icon(Icons.error_outline, color: Colors.redAccent, size: 32.r),
+        content: Text(error, style: AppStyles.font15DarkBlueMedium),
         actions: [
           TextButton(
             onPressed: () => context.pop(),

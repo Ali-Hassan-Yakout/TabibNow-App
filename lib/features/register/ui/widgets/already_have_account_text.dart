@@ -16,7 +16,7 @@ class AlreadyHaveAccountText extends StatelessWidget {
           children: [
             TextSpan(
               text: "Already have an account yet?",
-              style: AppStyles.font13BlackRegular,
+              style: AppStyles.font13DarkBlueRegular,
             ),
             TextSpan(
               text: " Sign In",
