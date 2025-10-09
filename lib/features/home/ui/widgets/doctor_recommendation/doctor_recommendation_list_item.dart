@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tabib_now/core/helpers/spacing.dart';
 import 'package:tabib_now/core/theming/app_styles.dart';
+import 'package:tabib_now/features/home/data/models/specializations_response_model.dart';
 
 class DoctorRecommendationListItem extends StatelessWidget {
-  const DoctorRecommendationListItem({super.key});
+  final Doctors? doctorData;
+
+  const DoctorRecommendationListItem({super.key, this.doctorData});
 
   @override
   Widget build(BuildContext context) {
@@ -33,17 +35,17 @@ class DoctorRecommendationListItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Dr. Randy Wigham", style: AppStyles.font16DarkBlueBold),
                 Text(
-                  "General  |  RSUD Gatot Subroto",
+                  doctorData?.name ?? "Name",
+                  style: AppStyles.font16DarkBlueBold,
+                ),
+                Text(
+                  "${doctorData?.degree}  |  ${doctorData?.phone}",
                   style: AppStyles.font12GrayMedium,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SvgPicture.asset('assets/svgs/rate_star.svg'),
-                    Text("4.8 (4,279 reviews)",style: AppStyles.font12GrayRegular,),
-                  ],
+                Text(
+                  doctorData?.email ?? "Email",
+                  style: AppStyles.font12GrayRegular,
                 ),
               ],
             ),

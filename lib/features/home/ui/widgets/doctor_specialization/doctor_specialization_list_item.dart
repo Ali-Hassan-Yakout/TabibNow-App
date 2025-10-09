@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tabib_now/core/helpers/spacing.dart';
 import 'package:tabib_now/core/theming/app_colors.dart';
 import 'package:tabib_now/core/theming/app_styles.dart';
 
@@ -26,6 +27,7 @@ class DoctorSpecializationListItem extends StatelessWidget {
             backgroundColor: AppColors.lightBlue,
             child: Image.asset(icon, width: 24.w, height: 24.h),
           ),
+          verticalSpace(12),
           Text(title, style: AppStyles.font12DarkBlueRegular),
         ],
       ),
