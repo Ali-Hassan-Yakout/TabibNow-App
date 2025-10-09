@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:tabib_now/core/networking/api_constants.dart';
+import 'package:tabib_now/features/home/data/models/specializations_response_model.dart';
 import 'package:tabib_now/features/login/data/models/login_request_body.dart';
 import 'package:tabib_now/features/login/data/models/login_response_body.dart';
 import 'package:tabib_now/features/register/data/models/register_request_body.dart';
@@ -19,4 +20,7 @@ abstract class ApiService {
   Future<RegisterResponseBody> register(
     @Body() RegisterRequestBody registerRequestBody,
   );
+
+  @GET(ApiConstants.specializations)
+  Future<SpecializationsResponseModel> getSpecializations();
 }

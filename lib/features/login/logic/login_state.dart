@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:tabib_now/core/networking/api_error_handler.dart';
 
 part 'login_state.freezed.dart';
 
@@ -10,5 +11,5 @@ class LoginState<T> with _$LoginState<T> {
 
   const factory LoginState.success(T data) = Success<T>;
 
-  const factory LoginState.error({required String error}) = Error;
+  const factory LoginState.error(ErrorHandler errorHandler) = Error;
 }
