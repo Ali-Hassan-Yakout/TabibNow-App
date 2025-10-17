@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:tabib_now/core/helpers/constants.dart';
+import 'package:tabib_now/core/helpers/shared_pref_helper.dart';
 
 class DioFactory {
   DioFactory._();
@@ -22,11 +24,16 @@ class DioFactory {
     }
   }
 
-  static void addDioHeaders() {
+  static Future<void> addDioHeaders() async {
     dio!.options.headers = {
       "Accept": "application/json",
-      "Authorization": "BearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzYwMDM1NTY1LCJleHAiOjE3NjAxMjE5NjUsIm5iZiI6MTc2MDAzNTU2NSwianRpIjoiaURkWlRwYmdURXNlbk1mSCIsInN1YiI6IjUyOTUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.xtnwQhZSjS8_vyH_bZ54Uwwi8qoJ2V1lLb_B8yUKt-k",
+      "Authorization":
+          "Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}",
     };
+  }
+
+  static void setHeadersAfterLogin(String token) {
+    dio!.options.headers = {"Authorization": "Bearer $token"};
   }
 
   static void addDioInterceptors() {

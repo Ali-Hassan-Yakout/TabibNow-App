@@ -65,6 +65,8 @@ dependencies:
   firebase_core: ^4.1.1
   # Flutter Secure Storage provides API to store data in secure storage.
   flutter_secure_storage: ^9.2.4
+  # Flutter plugin for reading and writing simple key-value pairs.
+  shared_preferences: ^2.5.3
 
 
 dev_dependencies:
