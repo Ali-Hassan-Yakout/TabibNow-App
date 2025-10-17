@@ -3,7 +3,6 @@ import 'package:get_it/get_it.dart';
 import 'package:tabib_now/core/networking/api_service.dart';
 import 'package:tabib_now/core/networking/dio_factory.dart';
 import 'package:tabib_now/features/home/data/repos/home_repo.dart';
-import 'package:tabib_now/features/home/logic/home_cubit.dart';
 import 'package:tabib_now/features/login/data/repos/login_repo.dart';
 import 'package:tabib_now/features/login/logic/login_cubit.dart';
 import 'package:tabib_now/features/register/data/repos/register_repo.dart';

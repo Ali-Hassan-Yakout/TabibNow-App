@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tabib_now/core/routing/app_router.dart';
 import 'package:tabib_now/core/theming/app_colors.dart';
 
+import 'core/helpers/constants.dart';
 import 'core/routing/routes.dart';
 
 class TabibNowApp extends StatelessWidget {
@@ -25,7 +26,7 @@ class TabibNowApp extends StatelessWidget {
           ),
           scaffoldBackgroundColor: Colors.white,
         ),
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: isLoggedIn ? Routes.homeScreen : Routes.onBoardingScreen,
         onGenerateRoute: appRouter.generateRoute,
       ),
     );
