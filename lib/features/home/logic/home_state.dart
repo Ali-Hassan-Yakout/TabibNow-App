@@ -13,4 +13,10 @@ class HomeState<T> with _$HomeState<T> {
   const factory HomeState.specializationSuccess(T data) = SpecializationSuccess<T>;
 
   const factory HomeState.specializationError(ErrorHandler errorHandler) = SpecializationError;
+
+  //Doctors
+
+  const factory HomeState.doctorsSuccess(T data) = DoctorsSuccess<T>;
+
+  const factory HomeState.doctorsError(ErrorHandler errorHandler) = DoctorsError;
 }
