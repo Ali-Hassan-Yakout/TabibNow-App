@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tabib_now/core/helpers/spacing.dart';
 import 'package:tabib_now/features/home/ui/widgets/discover_banner.dart';
+import 'package:tabib_now/features/home/ui/widgets/doctor_recommendation/doctor_recommendation_bloc_builder.dart';
 import 'package:tabib_now/features/home/ui/widgets/doctor_specialization/doctor_specialization_bar.dart';
+import 'package:tabib_now/features/home/ui/widgets/doctor_specialization/doctor_specialization_bloc_builder.dart';
 import 'package:tabib_now/features/home/ui/widgets/home_top_bar.dart';
-import 'package:tabib_now/features/home/ui/widgets/specializations_and_doctors_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,7 +28,9 @@ class HomeScreen extends StatelessWidget {
                 verticalSpace(24),
                 DoctorSpecializationBar(),
                 verticalSpace(16),
-                SpecializationsAndDoctorsBlocBuilder(),
+                DoctorSpecializationBlocBuilder(),
+                verticalSpace(23),
+                DoctorRecommendationBlocBuilder(),
               ],
             ),
           ),

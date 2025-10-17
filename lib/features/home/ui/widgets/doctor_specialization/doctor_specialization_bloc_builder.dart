@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tabib_now/core/helpers/spacing.dart';
 import 'package:tabib_now/core/networking/api_error_handler.dart';
-import 'package:tabib_now/features/home/data/models/specializations_response_model.dart';
 import 'package:tabib_now/features/home/logic/home_cubit.dart';
 import 'package:tabib_now/features/home/logic/home_state.dart';
-import 'package:tabib_now/features/home/ui/widgets/doctor_recommendation/doctor_recommendation_bar.dart';
-import 'package:tabib_now/features/home/ui/widgets/doctor_recommendation/doctor_recommendation_listview.dart';
+import 'package:tabib_now/features/home/ui/widgets/doctor_recommendation/doctor_recommendation_shimmer.dart';
 import 'package:tabib_now/features/home/ui/widgets/doctor_specialization/doctor_specialization_listview.dart';
+import 'package:tabib_now/features/home/ui/widgets/doctor_specialization/doctor_specialization_shimmer.dart';
 
-class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
-  const SpecializationsAndDoctorsBlocBuilder({super.key});
+class DoctorSpecializationBlocBuilder extends StatelessWidget {
+  const DoctorSpecializationBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,27 +30,18 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
   }
 
   Widget setupLoading() {
-    return SizedBox(
-      height: 100.h,
-      child: Center(child: CircularProgressIndicator()),
+    return Column(
+      children: [
+        DoctorSpecializationShimmer(),
+        verticalSpace(23),
+        DoctorRecommendationShimmer(),
+      ],
     );
   }
 
   Widget setupSuccess(data) {
-    List<SpecializationsData?> specializationDataList =
-        data.specializationDataList;
     return Column(
-      children: [
-        DoctorSpecializationListview(
-          specializationDataList: specializationDataList,
-        ),
-        verticalSpace(23),
-        DoctorRecommendationBar(),
-        verticalSpace(16),
-        DoctorRecommendationListview(
-          doctorDataList: specializationDataList[0]!.doctorsList!,
-        ),
-      ],
+      children: [DoctorSpecializationListview(specializationDataList: data)],
     );
   }
 
